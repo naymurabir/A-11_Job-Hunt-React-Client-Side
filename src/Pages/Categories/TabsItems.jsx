@@ -14,11 +14,11 @@ const TabsItems = () => {
     useEffect(() => {
         const getJobs = async () => {
             const { data } = await axiosInstance.get('/jobs')
-            console.log(data);
             setJobs(data)
         }
         getJobs()
     }, [axiosInstance])
+
 
     const OnSiteJob = jobs.filter(job => job.job_title === 'On Site Job')
     const remoteJob = jobs.filter(job => job.job_title === 'Remote Job')
@@ -29,19 +29,19 @@ const TabsItems = () => {
         <div>
             <div>
                 <div className="text-center my-5 md:my-5 lg:my-10 lg:w-3/4 mx-auto">
-                    <h2 className="text-xl font-bold text-[#CE1446]">Jobs</h2>
+                    <h2 className="text-xl font-bold text-[#FF3811]">Jobs</h2>
                     <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-gray-800">Our Latest Jobs</h1>
 
                     <div className="mt-2">
-                        <span className="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
-                        <span className="inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full"></span>
-                        <span className="inline-block w-1 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                        <span className="inline-block w-48 h-1 bg-[#FF3811] rounded-full"></span>
+                        <span className="inline-block w-5 h-1 ml-1 bg-[#FF3811] rounded-full"></span>
+                        <span className="inline-block w-3 h-1 ml-1 bg-[#FF3811] rounded-full"></span>
                     </div>
 
                 </div>
                 <div>
                     <Tabs>
-                        <TabList className="py-2 m-auto text-center">
+                        <TabList className="py-2 m-auto text-center font-semibold">
                             <Tab>All Jobs</Tab>
                             <Tab>On Site Job</Tab>
                             <Tab>Remote Job</Tab>

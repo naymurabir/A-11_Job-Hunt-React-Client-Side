@@ -68,8 +68,8 @@ const Login = () => {
                     timer: 2000
                 })
             })
-            .then(error => {
-                console.log("Error:", error.message);
+            .catch(error => {
+                console.log("Error:", error?.message);
                 Swal.fire({
                     position: 'center',
                     icon: 'success',
