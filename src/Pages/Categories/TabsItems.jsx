@@ -20,10 +20,10 @@ const TabsItems = () => {
     }, [axiosInstance])
 
 
-    const OnSiteJob = jobs.filter(job => job.job_title === 'On Site Job')
-    const remoteJob = jobs.filter(job => job.job_title === 'Remote Job')
-    const hybridJob = jobs.filter(job => job.job_title === 'Hybrid')
-    const partTimeJob = jobs.filter(job => job.job_title === 'Part Time')
+    const OnSiteJob = jobs.filter(job => job.job_category === 'On Site Job')
+    const remoteJob = jobs.filter(job => job.job_category === 'Remote Job')
+    const hybridJob = jobs.filter(job => job.job_category === 'Hybrid')
+    const partTimeJob = jobs.filter(job => job.job_category === 'Part Time')
 
     return (
         <div>

@@ -12,6 +12,7 @@ const Categories = ({ allJobs }) => {
                 {
                     allJobs.map(job => <Category key={job._id} job={job}></Category>)
                 }
+
             </div>
         </div>
     );

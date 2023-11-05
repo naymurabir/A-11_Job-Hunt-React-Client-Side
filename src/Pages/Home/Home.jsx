@@ -1,5 +1,4 @@
 import Banner from "../Banner/Banner";
-// import Categories from "../Categories/Categories";
 import 'react-tabs/style/react-tabs.css';
 import TabsItems from "../Categories/TabsItems";
 

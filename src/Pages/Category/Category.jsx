@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 
 const Category = ({ job }) => {
 
-    const { _id, author_name, job_title, posting_date, application_deadline, salary, applicants_number } = job
+    const { _id, name, job_title, posting_date, application_deadline, salary, applicants_number } = job
 
     const { user } = useContext(AuthContext)
 
@@ -37,9 +37,9 @@ const Category = ({ job }) => {
         <div>
             <div className="card bg-base-100 shadow-md my-5 lg:my-10 border border-[#FF3811]">
                 <div className="card-body">
-                    <h2 className='text-2xl font-bold text-center text-[#FF3811]'> {job_title} </h2>
+                    <h2 title={job_title} className='text-2xl font-bold truncate  text-center text-[#FF3811]'> {job_title} </h2>
                     <hr />
-                    <h2 className='text-base font-semibold'> Posted By: {author_name} </h2>
+                    <h2 className='text-base font-semibold'> Posted By: {name} </h2>
 
                     <div className='flex justify-between'>
                         <div>
