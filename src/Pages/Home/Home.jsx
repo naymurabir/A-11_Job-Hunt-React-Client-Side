@@ -1,10 +1,13 @@
 import Banner from "../Banner/Banner";
+// import Categories from "../Categories/Categories";
+import 'react-tabs/style/react-tabs.css';
+import TabsItems from "../Categories/TabsItems";
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h2 className="text-2xl font-bold text-center">This is the Home page</h2>
+            <TabsItems></TabsItems>
         </div>
     );
 };

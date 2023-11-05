@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import userImg from '../../../assets/user.png'
+// import userImg from '../../../assets/user.png'
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
@@ -13,11 +13,13 @@ const Navbar = () => {
 
         <NavLink to="/allJobs" className="text-base lg:text-white mr-3 font-semibold">All Jobs</NavLink>
 
-        <NavLink to="/addJob" className="text-base lg:text-white mr-3 font-semibold">Add A Job</NavLink>
+        {
+            user ? <>  <NavLink to="/addJob" className="text-base lg:text-white mr-3 font-semibold">Add A Job</NavLink>
 
-        <NavLink to="/myJobs" className="text-base lg:text-white mr-3 font-semibold">My Jobs</NavLink>
+                <NavLink to="/myJobs" className="text-base lg:text-white mr-3 font-semibold">My Jobs</NavLink>
 
-        <NavLink to="/appliedJobs" className="text-base lg:text-white mr-3 font-semibold">Applied Jobs</NavLink>
+                <NavLink to="/appliedJobs" className="text-base lg:text-white mr-3 font-semibold">Applied Jobs</NavLink> </> : ''
+        }
 
         <NavLink to="/blogs" className="text-base lg:text-white mr-3 font-semibold">Blogs</NavLink>
 
@@ -69,8 +71,8 @@ const Navbar = () => {
                 <div className="flex items-center gap-2">
 
                     {
-                        user ? <div aria-label={user?.displayName} data-cooltipz-dir="bottom" className="flex gap-2">
-                            <div className="flex items-center gap-2">
+                        user ? <div className="flex gap-2">
+                            <div aria-label={user?.displayName} data-cooltipz-dir="bottom" className="flex items-center gap-2">
                                 <img className="w-10 h-10 rounded-full hidden md:block" src={user?.photoURL} alt="" /> </div>
 
                             <div className="flex items-center gap-1">
@@ -81,9 +83,9 @@ const Navbar = () => {
                             :
                             <div className="flex items-center gap-2">
                                 <label >
-                                    <div className="w-10 rounded-full hidden md:block">
+                                    {/* <div className="w-10 rounded-full hidden md:block">
                                         <img src={userImg} />
-                                    </div>
+                                    </div> */}
                                 </label>
 
                                 <Link to="/login">
