@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div className='bg-[#FF3811]'>
-            <footer className="footer p-10   text-white">
+            <footer className="footer p-10 text-white">
                 <nav>
                     <header className="text-white text-lg font-bold">Services</header>
                     <a className="link link-hover">Job Searching</a>

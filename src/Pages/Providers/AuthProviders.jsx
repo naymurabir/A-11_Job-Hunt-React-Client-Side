@@ -58,6 +58,7 @@ const AuthProviders = ({ children }) => {
         </AuthContext.Provider>
     );
 };
+
 AuthProviders.propTypes = {
     children: PropTypes.node.isRequired
 }
