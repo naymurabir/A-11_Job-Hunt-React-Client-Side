@@ -55,7 +55,7 @@ const AddJobs = () => {
             <div>
                 <div className="my-5 text-center ">
                     <h2 className="text-2xl mb-3 text-[#ee4624] font-bold">Add A New Job</h2>
-                    <hr />
+                    <hr className="w-[50%] mx-auto" />
                 </div>
                 <div className="md:w-3/4 lg:w-2/4 mx-auto text-center bg-[#ee4624] text-black px-5 py-4 my-10 rounded">
 
