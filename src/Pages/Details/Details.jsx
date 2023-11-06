@@ -54,7 +54,7 @@ const Details = () => {
                         <h3 className="text-xl font-semibold"> No. Of Applicants: <span className="text-lg">{applicants_number}</span> </h3>
 
                         <div>
-                            <button onClick={() => setApplyJob(details)} className='text-white bg-[#FF3811] px-2 py-1 w-full rounded mt-2'> <label htmlFor="my_modal_6" className="font-semibold">Apply Now</label></button>
+                            <button onClick={() => setApplyJob(details)} className='text-white bg-[#FF3811] px-5 py-1 rounded mt-2'> <label htmlFor="my_modal_6" className="font-semibold">Apply Now</label></button>
                         </div>
                     </div>
                 </div>

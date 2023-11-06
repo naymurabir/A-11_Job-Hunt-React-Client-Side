@@ -12,6 +12,8 @@ const Navbar = () => {
 
         <NavLink to="/allJobs" className="text-base lg:text-white mr-3 font-semibold">All Jobs</NavLink>
 
+        <NavLink to="/blogs" className="text-base lg:text-white mr-3 font-semibold">Blogs</NavLink>
+
         {
             user ? <>  <NavLink to="/addJob" className="text-base lg:text-white mr-3 font-semibold">Add A Job</NavLink>
 
@@ -19,9 +21,6 @@ const Navbar = () => {
 
                 <NavLink to="/appliedJobs" className="text-base lg:text-white mr-3 font-semibold">Applied Jobs</NavLink> </> : ''
         }
-
-        <NavLink to="/blogs" className="text-base lg:text-white mr-3 font-semibold">Blogs</NavLink>
-
 
     </>
 

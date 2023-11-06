@@ -9,7 +9,7 @@ const Banner = () => {
                     <p className="mb-5 text-white">Your journey to career success begins here. Explore jobs, apply confidently, and start succeeding.</p>
 
                     <div className="flex items-center flex-col md:flex-row gap-2 md:gap-0">
-                        <input type="text" placeholder="Search job..." className="input input-bordered input-warning w-full max-w-xs bg-transparent" />
+                        <input type="text" placeholder="Search job..." className="input input-bordered input-warning w-full max-w-xs bg-transparent focus:outline-0" />
 
                         <button className="btn btn-outline btn-warning">Search Job</button>
                     </div>
