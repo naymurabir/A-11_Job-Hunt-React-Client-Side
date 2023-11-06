@@ -24,7 +24,16 @@ const ApplyModal = ({ details }) => {
         const deadLineDate = new Date(Date.parse(application_deadline))
 
         if (currentDate > deadLineDate) {
-            alert("Deadline is over.")
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Deadline is over to apply this Job.',
+                showConfirmButton: false,
+                background: '#343436',
+                heightAuto: '100px',
+                color: 'white',
+                timer: 2000
+            })
         } else {
             if (email !== currentUserEmail) {
                 const newForm = {

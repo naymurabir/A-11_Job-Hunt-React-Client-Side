@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
-const SingleJob = ({ job }) => {
+const MyJob = ({ job }) => {
 
     const { _id, name, job_title, posting_date, application_deadline, salary, image, applicants_number } = job
 
@@ -46,8 +46,8 @@ const SingleJob = ({ job }) => {
     );
 };
 
-SingleJob.propTypes = {
+MyJob.propTypes = {
     job: PropTypes.object.isRequired
 }
 
-export default SingleJob;
+export default MyJob;

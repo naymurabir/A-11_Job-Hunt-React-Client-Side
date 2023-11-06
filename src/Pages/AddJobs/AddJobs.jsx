@@ -22,7 +22,7 @@ const AddJobs = () => {
         const name = user?.displayName
         const job_category = selectedValue
         const image = form.get('image')
-        const email = user?.name
+        const email = user?.email
         const salary = form.get('salary')
         const job_title = form.get('job_title')
         const applicants_number = form.get('applicants_number')
