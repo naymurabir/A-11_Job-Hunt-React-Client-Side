@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 import useInterceptors from "../../Hooks/useInterceptors";
 import { useContext, useEffect, useState } from "react";

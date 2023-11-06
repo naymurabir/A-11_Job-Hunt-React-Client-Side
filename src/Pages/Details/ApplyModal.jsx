@@ -120,7 +120,6 @@ const ApplyModal = ({ details }) => {
     );
 };
 
-
 ApplyModal.propTypes = {
     details: PropTypes.object.isRequired
 }
