@@ -22,6 +22,7 @@ const AddJobs = () => {
         const name = user?.displayName
         const job_category = selectedValue
         const image = form.get('image')
+        const email = user?.name
         const salary = form.get('salary')
         const job_title = form.get('job_title')
         const applicants_number = form.get('applicants_number')
@@ -29,7 +30,7 @@ const AddJobs = () => {
         const application_deadline = format(startDate, 'dd/MM/yyyy')
         const description = form.get('description')
 
-        const newJob = { name, job_category, image, salary, job_title, applicants_number, posting_date, application_deadline, description }
+        const newJob = { name, job_category, image, salary, job_title, applicants_number, posting_date, application_deadline, description, email }
 
         console.log(newJob);
 

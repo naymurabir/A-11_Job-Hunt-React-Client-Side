@@ -24,7 +24,7 @@ const Details = () => {
         getDetails()
     }, [jobDetails, id])
 
-    console.log(details);
+
     const { image, job_title, description, salary, applicants_number
     } = details
 
@@ -59,7 +59,7 @@ const Details = () => {
                     </div>
                 </div>
             </div>
-            {applyJob && <ApplyModal></ApplyModal>}
+            {applyJob && <ApplyModal details={details}></ApplyModal>}
         </div>
     );
 };
