@@ -3,6 +3,7 @@ import useInterceptors from "../../Hooks/useInterceptors";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProviders";
 import ApplyModal from "./ApplyModal";
+import { Helmet } from 'react-helmet-async';
 
 const Details = () => {
 
@@ -29,6 +30,13 @@ const Details = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title>
+                    Job Hunt | Details
+                </title>
+            </Helmet>
+
             <div>
                 <div className="flex flex-col lg:flex-row gap-5 md:gap-10 my-5 lg:my-10">
                     <div className="lg:w-[60%]">

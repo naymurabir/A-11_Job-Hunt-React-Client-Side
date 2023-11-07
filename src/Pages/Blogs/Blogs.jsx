@@ -1,7 +1,15 @@
+import { Helmet } from 'react-helmet-async';
 
 const Blogs = () => {
     return (
         <div className="dark:text-gray-100 my-5 lg:my-10">
+
+            <Helmet>
+                <title>
+                    Job Hunt | Blogs
+                </title>
+            </Helmet>
+
             <div className="container px-2 md:px-5 lg:px-10 py-2 md:py-3 lg:py-6 mx-auto rounded-lg shadow-sm bg-[#ee4624]">
 
                 <div className="mt-3">

@@ -1,6 +1,7 @@
 import { ThreeDots } from "react-loader-spinner";
 import useMyJobs from "../../Hooks/useMyJobs";
 import MyJob from "./MyJob";
+import { Helmet } from 'react-helmet-async';
 
 const MyJobs = () => {
 
@@ -23,6 +24,12 @@ const MyJobs = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title>
+                    Job Hunt | My Jobs
+                </title>
+            </Helmet>
 
             <div className="flex justify-center">
                 <div className="overflow-x-auto mt-10">

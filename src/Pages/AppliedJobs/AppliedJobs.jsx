@@ -1,8 +1,19 @@
+import { Helmet } from 'react-helmet-async';
+
 
 const AppliedJobs = () => {
     return (
         <div>
-            <h2>Applied Jobs</h2>
+
+            <Helmet>
+                <title>
+                    Job Hunt | Applied Jobs
+                </title>
+            </Helmet>
+
+            <div>
+                <h2>Applied Jobs</h2>
+            </div>
         </div>
     );
 };

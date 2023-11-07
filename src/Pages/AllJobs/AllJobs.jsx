@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import useInterceptors from "../../Hooks/useInterceptors";
 import SingleJob from "./SingleJob";
-
+import { Helmet } from 'react-helmet-async';
 
 
 const AllJobs = () => {
@@ -22,6 +22,13 @@ const AllJobs = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title>
+                    Job Hunt | All Jobs
+                </title>
+            </Helmet>
+
             <div className="mt-10">
 
                 <h2 className="text-center font-bold my-3 text-2xl text-[#FF3811]">Search Your Desired Job</h2>

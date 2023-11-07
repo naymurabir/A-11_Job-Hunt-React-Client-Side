@@ -5,6 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { AuthContext } from "../Providers/AuthProviders";
 import useInterceptors from "../../Hooks/useInterceptors";
 import Swal from "sweetalert2";
+import { Helmet } from 'react-helmet-async';
 
 
 const AddJobs = () => {
@@ -52,6 +53,12 @@ const AddJobs = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title>
+                    Job Hunt | Add Job
+                </title>
+            </Helmet>
 
             <div>
                 <div className="my-5 text-center ">
