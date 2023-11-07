@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 
 
-const MyJob = ({ job }) => {
+const MyJob = ({ job, handleDeleteMyJobs }) => {
 
-    const { name, job_title, posting_date, application_deadline, salary, image, applicants_number } = job
-
+    const { _id, name, job_title, posting_date, application_deadline, salary, image, applicants_number } = job
 
     return (
         <>
@@ -40,7 +39,7 @@ const MyJob = ({ job }) => {
                 <td>
                     <button className='bg-[#FF3811] text-white py-2 px-5 rounded-sm font-semibold'>Update</button>
 
-                    <button className='bg-[#FF3811] text-white py-2 px-5 rounded-sm font-semibold ml-4'>Delete</button>
+                    <button onClick={() => handleDeleteMyJobs(_id)} className='bg-[#FF0000] text-white py-2 px-5 rounded-sm font-semibold ml-4'>Delete</button>
                 </td>
             </tr>
         </>
@@ -48,7 +47,8 @@ const MyJob = ({ job }) => {
 };
 
 MyJob.propTypes = {
-    job: PropTypes.object.isRequired
+    job: PropTypes.object.isRequired,
+    handleDeleteMyJobs: PropTypes.func.isRequired
 }
 
 export default MyJob;

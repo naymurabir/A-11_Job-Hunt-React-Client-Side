@@ -13,7 +13,7 @@ const useMyJobs = () => {
 
     const { user } = useContext(AuthContext)
 
-    const { data: jobs, isPending } = useQuery({
+    const { data: jobs, isPending, refetch } = useQuery({
         queryKey: ['jobs_id'],
         queryFn: async () => {
             const { data } = await axiosInstance.get(`/myJobs?email=${user?.email}`)
@@ -22,7 +22,7 @@ const useMyJobs = () => {
     })
 
 
-    return { jobs, isPending }
+    return { jobs, isPending, refetch }
 }
 
 export default useMyJobs;
