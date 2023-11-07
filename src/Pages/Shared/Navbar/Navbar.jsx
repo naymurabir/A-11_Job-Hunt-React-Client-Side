@@ -71,7 +71,7 @@ const Navbar = () => {
                     {
                         user ? <div className="flex gap-2">
                             <div aria-label={user?.displayName} data-cooltipz-dir="bottom" className="flex items-center gap-2">
-                                <img className="w-10 h-10 rounded-full hidden md:block" src={user?.photoURL} alt="" /> </div>
+                                <img className="w-10 h-10 rounded-full hidden md:block" src={user?.photoURL} alt="" referrerPolicy="no-referrer" /> </div>
 
                             <div className="flex items-center gap-1">
                                 <button onClick={handleLogOut} className="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-200 ">Log Out</button>

@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 
 const MyJob = ({ job, handleDeleteMyJobs }) => {
+
+    const navigate = useNavigate()
 
     const { _id, name, job_title, posting_date, application_deadline, salary, image, applicants_number } = job
 
@@ -37,7 +40,7 @@ const MyJob = ({ job, handleDeleteMyJobs }) => {
                     <h1><span className='text-base font-semibold text-[#FF3811]'>Applicants</span>:{applicants_number}</h1>
                 </td>
                 <td>
-                    <button className='bg-[#FF3811] text-white py-2 px-5 rounded-sm font-semibold'>Update</button>
+                    <button onClick={() => navigate(`/updateJob/${_id}`)} className='bg-[#FF3811] text-white py-2 px-5 rounded-sm font-semibold'>Update</button>
 
                     <button onClick={() => handleDeleteMyJobs(_id)} className='bg-[#FF0000] text-white py-2 px-5 rounded-sm font-semibold ml-4'>Delete</button>
                 </td>
