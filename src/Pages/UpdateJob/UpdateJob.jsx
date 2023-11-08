@@ -12,7 +12,7 @@ const UpdateJob = () => {
 
     const axiosInstance = useInterceptors()
 
-    const [startDate, setStartDate] = useState(new Date())
+    const [startDate, setStartDate] = useState(null)
     const [updateJob, setUpdateJob] = useState([])
 
     const { id } = useParams()
@@ -20,6 +20,7 @@ const UpdateJob = () => {
     useEffect(() => {
         const updateJob = async () => {
             const { data } = await axiosInstance.get(`/job/${id}`)
+            setStartDate(new Date(data?.application_deadline))
             setUpdateJob(data)
         }
         updateJob()
@@ -41,7 +42,7 @@ const UpdateJob = () => {
         const job_category = selectedValue || updateJob.job_category
         const applicants_number = form.get('applicants_number')
         const posting_date = form.get('posting_date')
-        const application_deadline = format(startDate, 'dd/MM/yyyy')
+        const application_deadline = format(startDate, 'MM/dd/yyyy')
         const description = form.get('description')
 
         const newUpdateJob = { job_category, name, image, salary, job_title, applicants_number, posting_date, application_deadline, description }
