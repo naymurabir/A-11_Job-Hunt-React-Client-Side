@@ -3,7 +3,7 @@ import { useContext, useEffect } from "react";
 import { AuthContext } from "../Pages/Providers/AuthProviders";
 
 const instance = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://job-hunt-server-drab.vercel.app',
     withCredentials: true
 });
 
