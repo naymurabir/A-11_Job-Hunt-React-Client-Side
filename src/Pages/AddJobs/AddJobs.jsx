@@ -11,10 +11,8 @@ import { Helmet } from 'react-helmet-async';
 const AddJobs = () => {
 
     const { user } = useContext(AuthContext)
-
     const [selectedValue, setSelectedValue] = useState('')
     const [startDate, setStartDate] = useState(new Date());
-
     const axiosInstance = useInterceptors()
 
     const handleAddJob = async (e) => {
@@ -65,7 +63,7 @@ const AddJobs = () => {
                     <h2 className="text-2xl mb-3 text-[#ee4624] font-bold">Add A New Job</h2>
                     <hr className="w-[50%] mx-auto" />
                 </div>
-                <div className="md:w-3/4 lg:w-2/4 mx-auto text-center bg-[#ee4624] text-black px-5 py-4 my-10 rounded">
+                <div className="md:w-3/4 lg:w-2/4 mx-auto text-center bg-[#FF3811] text-black px-5 py-4 my-10 rounded">
 
                     <div>
                         <form onSubmit={handleAddJob}>

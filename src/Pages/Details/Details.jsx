@@ -25,7 +25,7 @@ const Details = () => {
     }, [jobDetails, id])
 
 
-    const { image, job_title, description, salary, applicants_number
+    const { name, email, image, job_title, description, salary, applicants_number, job_category
     } = details
 
     return (
@@ -49,14 +49,15 @@ const Details = () => {
                                 <img className="w-20 h-20 rounded-full" src={user?.photoURL} alt="" />
                             </div>
                             <div className="text-center">
-                                <h2 className="text-xl font-semibold ">{user?.displayName}</h2>
-                                <h3 className="text-sm  ">{user?.email}</h3>
+                                <h2 className="text-xl font-semibold ">{name}</h2>
+                                <h3 className="text-sm  ">{email}</h3>
                             </div>
                         </div>
 
                         <h2 className="className='text-2xl md:text-3xl lg:text-4xl font-bold text-[#FF3811]">{job_title}</h2>
                         <hr className="my-3" />
                         <p className="className='text-sm text-gray-900 mt-3 text-justify font-semibold'"> {description} </p>
+                        <h2 className="text-xl font-bold">Job Category: {job_category} </h2>
                         <h3 className='text-xl font-semibold flex items-center mt-2'> Salary: <span className="text-lg ml-1"> ${salary}</span>  </h3>
                         <h3 className="text-xl font-semibold"> No. Of Applicants: <span className="text-lg">{applicants_number}</span> </h3>
 
@@ -66,7 +67,7 @@ const Details = () => {
                     </div>
                 </div>
             </div>
-            {applyJob && <ApplyModal details={details}></ApplyModal>}
+            {applyJob && <ApplyModal applyJob={applyJob}></ApplyModal>}
         </div>
     );
 };

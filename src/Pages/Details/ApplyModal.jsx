@@ -5,28 +5,27 @@ import useInterceptors from "../../Hooks/useInterceptors";
 import Swal from "sweetalert2";
 
 
-const ApplyModal = ({ details }) => {
+const ApplyModal = ({ applyJob }) => {
 
     const axiosInstance = useInterceptors()
 
-    const { application_deadline, email, _id } = details
-
     const { user } = useContext(AuthContext)
+
+    const { _id: jobId, name, job_category, image, salary, job_title, applicants_number, posting_date, application_deadline, description, email } = applyJob
 
     const handleApplyForm = e => {
         e.preventDefault()
         const form = new FormData(e.currentTarget)
-        const name = user?.displayName
-        const currentUserEmail = user?.email
-        const resume = form.get('resume')
-        const applyId = _id
+        const applyName = user?.displayName
+        const applyEmail = user?.email
+        const applyResume = form.get('resume')
         const currentDate = new Date()
         const deadLineDate = new Date(Date.parse(application_deadline))
 
         if (currentDate > deadLineDate) {
             Swal.fire({
                 position: 'center',
-                icon: 'success',
+                icon: 'error',
                 title: 'Deadline is over to apply this Job.',
                 showConfirmButton: false,
                 background: '#343436',
@@ -35,10 +34,12 @@ const ApplyModal = ({ details }) => {
                 timer: 2000
             })
         } else {
-            if (email !== currentUserEmail) {
+            if (email !== applyEmail) {
                 const newForm = {
-                    name, email: currentUserEmail, resume, applyId
+                    applyName, applyEmail, applyResume, name, job_category, image, salary, job_title, applicants_number, posting_date, application_deadline, description, email, jobId
                 }
+
+                console.log(newForm);
 
                 axiosInstance.post('/jobApply', newForm)
                     .then(result => {
@@ -121,7 +122,7 @@ const ApplyModal = ({ details }) => {
 };
 
 ApplyModal.propTypes = {
-    details: PropTypes.object.isRequired
+    applyJob: PropTypes.object.isRequired
 }
 
 export default ApplyModal;

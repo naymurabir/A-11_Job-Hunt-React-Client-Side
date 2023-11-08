@@ -10,12 +10,11 @@ const AllJobs = () => {
     const [allJobs, setAllJobs] = useState([])
     const [searchJob, setSearchJob] = useState('')
 
-
     useEffect(() => {
         (async () => {
             const { data } = await axiosInstance.get('/jobs')
-            const match = data.filter(d => d.job_title.toLowerCase().includes(searchJob.toLowerCase()));
-            setAllJobs(match)
+            const matchedData = data.filter(singleData => singleData.job_title.toLowerCase().includes(searchJob.toLowerCase()));
+            setAllJobs(matchedData)
         })()
     }, [axiosInstance, searchJob])
 

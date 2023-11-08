@@ -1,12 +1,8 @@
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
 
+const SingleAppliedJob = ({ appliedCategoryJob }) => {
 
-const MyJob = ({ job, handleDeleteMyJobs }) => {
-
-    const navigate = useNavigate()
-
-    const { _id, name, job_title, posting_date, application_deadline, salary, image, job_category } = job
+    const { name, job_title, posting_date, application_deadline, salary, image, job_category } = appliedCategoryJob
 
     return (
         <>
@@ -21,41 +17,33 @@ const MyJob = ({ job, handleDeleteMyJobs }) => {
                         <div>
                             <div>
                                 <div className='text-base font-semibold truncate text-[#FF3811]'>{job_title}</div>
-                                <div className="text-sm font-semibold">{name}</div>
+                                <div className="text-sm font-semibold text-black">{name}</div>
                             </div>
                         </div>
                     </div>
                 </td>
                 <td>
                     <h1 className='text-base font-semibold text-[#FF3811]'>Posting Date</h1>
-                    <h1 className='font-semibold'>{posting_date}</h1>
+                    <h1 className='font-semibold text-black'>{posting_date}</h1>
                 </td>
                 <td>
                     <h1 className='text-base font-semibold text-[#FF3811]'>Application Deadline</h1>
-                    <h1 className='font-semibold'>{application_deadline}</h1>
+                    <h1 className='font-semibold text-black'>{application_deadline}</h1>
                 </td>
 
                 <td>
                     <h1 className='text-base font-semibold text-[#FF3811]'>Salary: </h1> <h2 className='font-semibold text-black'>{salary}</h2>
                 </td>
-
                 <td>
-                    <h1 className='text-base font-semibold text-[#FF3811]'>Job Category: </h1> <h2 className='font-semibold text-black'>{job_category}</h2>
-                </td>
-
-                <td>
-                    <button onClick={() => navigate(`/updateJob/${_id}`)} className='bg-[#FF3811] text-white py-2 px-5 rounded-sm font-semibold'>Update</button>
-
-                    <button onClick={() => handleDeleteMyJobs(_id)} className='bg-[#FF0000] text-white py-2 px-5 rounded-sm font-semibold ml-4'>Delete</button>
+                    <h1 className='text-base font-semibold text-[#FF3811]'>Job Category:  </h1> <h2 className='font-semibold text-black'>{job_category}</h2>
                 </td>
             </tr>
         </>
     );
 };
 
-MyJob.propTypes = {
-    job: PropTypes.object.isRequired,
-    handleDeleteMyJobs: PropTypes.func.isRequired
+SingleAppliedJob.propTypes = {
+    appliedCategoryJob: PropTypes.object.isRequired
 }
 
-export default MyJob;
+export default SingleAppliedJob;
