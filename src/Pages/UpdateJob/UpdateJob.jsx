@@ -144,7 +144,7 @@ const UpdateJob = () => {
                                         <span className="label-text font-semibold text-white">Applicants Number</span>
                                     </label>
                                     <input
-                                        defaultValue={applicants_number}
+                                        defaultValue={parseInt(applicants_number)}
                                         type="text" name="applicants_number" placeholder="Applicants Number..." className="input input-bordered w-full text-sm max-w-xs focus:outline-0" />
                                 </div>
                             </div>
