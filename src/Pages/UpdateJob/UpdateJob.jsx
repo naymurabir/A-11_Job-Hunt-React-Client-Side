@@ -40,7 +40,7 @@ const UpdateJob = () => {
         const salary = form.get('salary')
         const job_title = form.get('job_title')
         const job_category = selectedValue || updateJob.job_category
-        const applicants_number = form.get('applicants_number')
+        const applicants_number = parseInt(form.get('applicants_number'))
         const posting_date = form.get('posting_date')
         const application_deadline = format(startDate, 'MM/dd/yyyy')
         const description = form.get('description')
