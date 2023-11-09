@@ -57,6 +57,11 @@ const ApplyModal = ({ applyJob }) => {
                         console.log(result.data);
                         if (result.data.insertedId) {
 
+                            axiosInstance.patch(`/updateApplicants/${jobId}`)
+                                .then(result => {
+                                    console.log(result.data)
+                                })
+
                             // Email JS------------------------------------
                             emailjs.send('service_11kk9iq', 'template_nomzrht', templateParams, 'OODnN_JBcfByZ2M0F')
                                 .then((response) => {

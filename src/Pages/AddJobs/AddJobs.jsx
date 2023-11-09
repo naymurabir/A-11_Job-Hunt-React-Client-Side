@@ -24,7 +24,7 @@ const AddJobs = () => {
         const email = user?.email
         const salary = form.get('salary')
         const job_title = form.get('job_title')
-        const applicants_number = form.get('applicants_number')
+        const applicants_number = parseInt(form.get('applicants_number'))
         const posting_date = form.get('posting_date')
         const application_deadline = format(startDate, 'MM/dd/yyyy')
         const description = form.get('description')
@@ -32,7 +32,6 @@ const AddJobs = () => {
         const newJob = { name, job_category, image, salary, job_title, applicants_number, posting_date, application_deadline, description, email }
 
         console.log(newJob);
-
         const { data } = await axiosInstance.post('/jobs', newJob)
         if (data.insertedId) {
             Swal.fire({
@@ -110,7 +109,7 @@ const AddJobs = () => {
                                     <label className="label">
                                         <span className="label-text font-semibold text-white">Salary</span>
                                     </label>
-                                    <input type="text" name="salary" placeholder="Salary..." className="input input-bordered w-full text-sm max-w-xs focus:outline-0" />
+                                    <input type="number" name="salary" placeholder="Salary..." className="input input-bordered w-full text-sm max-w-xs focus:outline-0" />
                                 </div>
                             </div>
 
@@ -165,7 +164,6 @@ const AddJobs = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
