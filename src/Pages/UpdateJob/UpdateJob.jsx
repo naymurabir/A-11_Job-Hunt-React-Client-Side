@@ -40,7 +40,8 @@ const UpdateJob = () => {
         const salary = form.get('salary')
         const job_title = form.get('job_title')
         const job_category = selectedValue || updateJob.job_category
-        const applicants_number = parseInt(form.get('applicants_number'))
+        // const applicants_number = parseInt(form.get('applicants_number'))
+        const applicants_number = parseInt(e.target.applicants_number.value)
         const posting_date = form.get('posting_date')
         const application_deadline = format(startDate, 'MM/dd/yyyy')
         const description = form.get('description')
@@ -144,8 +145,8 @@ const UpdateJob = () => {
                                         <span className="label-text font-semibold text-white">Applicants Number</span>
                                     </label>
                                     <input
-                                        defaultValue={parseInt(applicants_number)}
-                                        type="text" name="applicants_number" placeholder="Applicants Number..." className="input input-bordered w-full text-sm max-w-xs focus:outline-0" />
+                                        defaultValue={applicants_number}
+                                        type="number" name="applicants_number" placeholder="Applicants Number..." className="input input-bordered w-full text-sm max-w-xs focus:outline-0" />
                                 </div>
                             </div>
 
