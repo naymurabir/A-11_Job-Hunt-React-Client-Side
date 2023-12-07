@@ -1,7 +1,7 @@
 # Assignment ID: assignment_category_0003
 
 # Client Side Live Link
-- https://job-hunt-react-project.web.app
+# https://magical-lamp-test.surge.sh
 
 # Features_And_Functionalities
 
