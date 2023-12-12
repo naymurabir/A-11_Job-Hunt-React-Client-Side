@@ -7,13 +7,13 @@ import SingleAppliedJob from './SingleAppliedJob';
 
 const AppliedJobs = () => {
 
+    const { user } = useContext(AuthContext)
+
     const axiosInstance = useInterceptors()
 
     const [categoryJob, setCategoryJob] = useState('')
 
     const [appliedCategoryJobs, setAppliedCategoryJobs] = useState([])
-
-    const { user } = useContext(AuthContext)
 
     useEffect(() => {
         (async () => {
