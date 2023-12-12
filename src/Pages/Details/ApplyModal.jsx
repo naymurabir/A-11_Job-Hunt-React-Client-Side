@@ -15,9 +15,7 @@ const ApplyModal = ({ applyJob }) => {
     const { _id: jobId, name, job_category, image, salary, job_title, applicants_number, posting_date, application_deadline, description, email } = applyJob
 
     const handleApplyForm = e => {
-
         e.preventDefault()
-
         const form = new FormData(e.currentTarget)
         const applyName = user?.displayName
         const applyEmail = user?.email
