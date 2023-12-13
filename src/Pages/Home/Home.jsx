@@ -6,6 +6,7 @@ import Statistics from "../Statistics/Statistics";
 import ClientsFeedback from "../ClientsFeedback/ClientsFeedback";
 import { Helmet } from 'react-helmet-async';
 import TopCompanies from "../TopCompanies/TopCompanies";
+import WhatYouDoWithJobHunt from "../WhatYouDoWithJobHunt/WhatYouDoWithJobHunt";
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
             <Statistics></Statistics>
             <ClientsFeedback></ClientsFeedback>
             <TopCompanies></TopCompanies>
+            <WhatYouDoWithJobHunt></WhatYouDoWithJobHunt>
         </div>
     );
 };
